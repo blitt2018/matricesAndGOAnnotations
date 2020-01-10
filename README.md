@@ -4,10 +4,11 @@ This project is focused on using GO annotations as a means to confirm homology b
 ## BLASTing 
 First, it was necessary to BLAST proteins using the novel matrices. Code is not provided for this; however, BLAST had to be recompiled for every different matrix used. After this recompilation, bash scripts were used to BLAST identical queries against the same database. This was done on an HPC cluster using BLAST 2.6. Example found in testMediumInWSeqInfo.sh. 
 
-## Visualizing BLAST output quantity 
+## Visualizing BLAST Output Quantity 
 One simple but crucial peice of information is the amount of hits returned by versions of BLAST employing different scoring matrices. This is the start of classifying what a "better" BLAST would look like. One consideration is that BLAST outputs multiple hits for the same protein, if the protein is matched at various points of its sequence. Visualizations were made that both accounted for, and did not account for this factor. Example output shown below: 
 
-!(Amount of hits w/o doubles)[https://github.com/blitt2018/matricesAndGOAnnotations/blob/master/graphBlastAmplitudeGroupsNoDoubles.html]
+![Amount of hits w/o doubles](https://github.com/blitt2018/matricesAndGOAnnotations/blob/master/blastOutAmpGroupsNoDoubles.png)
+![Amount of hits w/ doubles](https://github.com/blitt2018/matricesAndGOAnnotations/blob/master/blastOutAmpGroupsWDoubles.png)
 
 ## Retreiving GO Annotations 
 After generating BLAST output from different scoring matrices, the next step was to retreive GO annotations for each output protein. This was done along two pathways, depending on the source of proteins used when BLASTing. 
